@@ -6,12 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JS Library</title>
 
+    <!-- CSS Reset -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/reset-css@3.0.0/reset.min.css" />
+    <!-- External CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
     <!-- Bootsrap CDN-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 
     <!-- Glide CDN -->
     <link rel="stylesheet" href="node_modules/@glidejs/glide/dist/css/glide.core.min.css">
+
+    <!-- AOS CDN -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
 
 </head>
@@ -21,8 +29,7 @@
         <nav class="navbar navbar-expand-lg bg-body-tertiary ">
             <div class="container-fluid ">
                 <a class="navbar-brand" href="#">
-                    <img src="./assets/images/Blue and Yellow Illustrative Travel Agency Logo.png" alt="" height="100"
-                        width="100">
+                    <p class="h1">TRAVEX</p>
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
@@ -57,16 +64,19 @@
         </nav>
     </div>
 
+    <div id="Logo" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">
+        <img src="./assets/images/Blue and Yellow Illustrative Travel Agency Logo.png" alt="">
+    </div>
 
-    <section class="" id="hero ">
+    <section class="" id="hero">
         <div class="container text-center">
             <div class="row">
                 <div id="heroDscrptn" class="col">
-                    <p class="h2 fw-bold">
+                    <p class="h2 fw-bold" data-aos="fade-up" data-aos-duration="1200">
                         Hello, Traveler! Ready for a Fall Getaway?
                     </p>
 
-                    <p class="h4 fw-light">
+                    <p class="h4 fw-light" data-aos="fade-right" data-aos-duration="1400">
                         Swap chilly weather and city commutes for island breezes and crystal-clear waters. This Fall,
                         answer the
                         call of The Bahamas—where golden sunshine, calm turquoise seas, and balmy 30°C days await.
@@ -82,7 +92,7 @@
 
                 </div>
 
-                <div class="col">
+                <div class="col" data-aos="zoom-out-left" data-aos-duration="2000">
                     <a href="">
                         <img src="./assets/images/travelpic1.jpg" alt="" width="650" height="450">
                     </a>
@@ -92,17 +102,64 @@
 
     </section>
 
-    <section>
-        <div>
+    <section id="glide" class="container-fluid">
+        <div id="pictures" class="col">
             <div class="glide">
-                <div class="glide__track" data-glide-el="track">...</div>
+                <div class="glide__track" data-glide-el="track">
+                    <ul class="glide__slides">
+                        <li id="explore" class="glide__slide">
+                            <img id="exploreIMG" src="./assets/images/ParadiseIsland.jpg" alt="" width="700"
+                                height="500">
+                            <div>
+                                <p class="h1">EXPLORE</p>
+                                <p class="h4 fw-light">Nassau is where vibrant island culture meets postcard-perfect
+                                    beaches.
+                                    From
+                                    its powder-soft sands and shimmering turquoise waters to its colorful colonial
+                                    architecture and lively markets, the capital of The Bahamas blends relaxation,
+                                    adventure, and history with effortless island charm.</p>
+                            </div>
 
-                <div class="glide__arrows" data-glide-el="controls">
-                    <button class="glide__arrow glide__arrow--left" data-glide-dir="<">prev</button>
+                        </li>
+                        <li id="relax" class="glide__slide">
+                            <img id="relaxIMG" src="./assets/images/Paradise2.jpg" alt="" width="700" height="500">
+                            <div>
+                                <p class="h1">RELAX</p>
+                                <p class="h4 fw-light">Spend your days floating in warm crystal-clear seas, snorkeling
+                                    vibrant coral reefs,
+                                    or unwinding on iconic Cable Beach. Wander through the pastel-hued streets of
+                                    downtown, explore rich Bahamian heritage at the Queen’s Staircase and Fort
+                                    Charlotte, and browse handcrafted treasures at the Straw Market. When the sun sets,
+                                    savor fresh seafood, sip handcrafted cocktails with ocean views, and enjoy the
+                                    rhythmic nightlife that brings Nassau to life.</p>
+                            </div>
+
+                        </li>
+                        <li id="stay" class="glide__slide">
+                            <img id="stayIMG" src="./assets/images/paradise3.jpg" alt="" width="700" height="500">
+                            <div>
+                                <p class="h1">STAY</p>
+                                <p class="h4 fw-light">Whether you're craving luxury resorts, thrilling waterparks,
+                                    private-island escapes, or laid-back beach bars, Nassau delivers the perfect balance
+                                    of island bliss and energetic Bahamian spirit.</p>
+                            </div>
+
+                        </li>
+                    </ul>
+                </div>
+
+
+                <div id="arrows" class="glide__arrows" data-glide-el="controls">
+                    <button id="leftArrow" class="glide__arrow glide__arrow--left" data-glide-dir="<">prev</button>
                     <button class="glide__arrow glide__arrow--right" data-glide-dir=">">next</button>
                 </div>
             </div>
         </div>
+
+    </section>
+
+    <section>
+        
     </section>
 
 
@@ -116,6 +173,12 @@
     <script src="node_modules/@glidejs/glide/dist/glide.min.js"></script>
     <script>
         new Glide('.glide').mount()
+    </script>
+
+    <!-- AOS script -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
     </script>
 </body>
 
