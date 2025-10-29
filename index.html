@@ -21,6 +21,13 @@
     <!-- AOS CDN -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
+    <!-- Flickity CDN -->
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+    <link rel="stylesheet" href="/path/to/flickity.css" media="screen">
+
+    <!-- Fullpage CDN -->
+    <link rel="stylesheet" type="text/css" href="fullpage.css" />
+
 
 </head>
 
@@ -37,7 +44,7 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                    <ul class="navbar-nav position-absolute top-20 start-50">
+                    <ul class="navbar-nav position-absolute top-20 end-0">
                         <li class="nav-item">
                             <a class="nav-link active" aria-current="page" href="#">Home</a>
                         </li>
@@ -102,7 +109,7 @@
 
     </section>
 
-    <section id="glide" class="container-fluid">
+    <section id="glide" class="container-fluid" data-aos="zoom-in-right" data-aos-duration="2000">
         <div id="pictures" class="col">
             <div class="glide">
                 <div class="glide__track" data-glide-el="track">
@@ -111,37 +118,48 @@
                             <img id="exploreIMG" src="./assets/images/ParadiseIsland.jpg" alt="" width="700"
                                 height="500">
                             <div>
-                                <p class="h1">EXPLORE</p>
-                                <p class="h4 fw-light">Nassau is where vibrant island culture meets postcard-perfect
+                                <p class="h1" data-aos="zoom-out" data-aos-duration="1400">EXPLORE</p>
+                                <p class="h4 fw-light" data-aos="zoom-out" data-aos-duration="1400">Nassau is where
+                                    vibrant island culture meets postcard-perfect
                                     beaches.
                                     From
                                     its powder-soft sands and shimmering turquoise waters to its colorful colonial
                                     architecture and lively markets, the capital of The Bahamas blends relaxation,
-                                    adventure, and history with effortless island charm.</p>
+                                    adventure, and history with effortless island charm.
+                                    <br>Book Now!
+                                </p>
+                                <a class="btn btn-primary" href="#" role="button" data-aos="zoom-out"
+                                    data-aos-duration="1400">BOOK</a>
                             </div>
 
                         </li>
                         <li id="relax" class="glide__slide">
                             <img id="relaxIMG" src="./assets/images/Paradise2.jpg" alt="" width="700" height="500">
                             <div>
-                                <p class="h1">RELAX</p>
-                                <p class="h4 fw-light">Spend your days floating in warm crystal-clear seas, snorkeling
+                                <p class="h1" data-aos="zoom-out" data-aos-duration="1400">RELAX</p>
+                                <p class="h4 fw-light" data-aos="zoom-out" data-aos-duration="1400">Spend your days
+                                    floating in warm crystal-clear seas, snorkeling
                                     vibrant coral reefs,
                                     or unwinding on iconic Cable Beach. Wander through the pastel-hued streets of
                                     downtown, explore rich Bahamian heritage at the Queen’s Staircase and Fort
                                     Charlotte, and browse handcrafted treasures at the Straw Market. When the sun sets,
                                     savor fresh seafood, sip handcrafted cocktails with ocean views, and enjoy the
                                     rhythmic nightlife that brings Nassau to life.</p>
+                                <a class="btn btn-primary" href="#" role="button" data-aos="zoom-out"
+                                    data-aos-duration="1400">BOOK</a>
                             </div>
 
                         </li>
                         <li id="stay" class="glide__slide">
                             <img id="stayIMG" src="./assets/images/paradise3.jpg" alt="" width="700" height="500">
                             <div>
-                                <p class="h1">STAY</p>
-                                <p class="h4 fw-light">Whether you're craving luxury resorts, thrilling waterparks,
+                                <p class="h1" data-aos="zoom-out" data-aos-duration="1400">STAY</p>
+                                <p class="h4 fw-light" data-aos="zoom-out" data-aos-duration="1400">Whether you're
+                                    craving luxury resorts, thrilling waterparks,
                                     private-island escapes, or laid-back beach bars, Nassau delivers the perfect balance
                                     of island bliss and energetic Bahamian spirit.</p>
+                                <a class="btn btn-primary" href="#" role="button" data-aos="zoom-out"
+                                    data-aos-duration="1400">BOOK</a>
                             </div>
 
                         </li>
@@ -158,10 +176,79 @@
 
     </section>
 
-    <section>
-        
+
+    <section id="attractions" data-aos="zoom-out" data-aos-duration="1400">
+        <div class="carousel">
+            <div class="carousel-cell">
+                <img src="./assets/images/boat.jpg" alt="boat" />
+            </div>
+            <div class="carousel-cell">
+                <img src="./assets/images/pigs.jpg" alt="pigs" />
+            </div>
+            <div class="carousel-cell">
+                <img src="./assets/images/sharks.jpg" alt="sharks" />
+            </div>
+            <div class="carousel-cell">
+                <img src="./assets/images/fish.jpg" alt="fish" />
+            </div>
+            <div class="carousel-cell">
+                <img src="./assets/images/black beard.jpg" alt="ship" />
+            </div>
+            <div class="carousel-cell">
+                <img src="./assets/images/treasure cay.jpg" alt="island" />
+            </div>
+            <div class="carousel-cell">
+                <img src="./assets/images/green turtle.jpg" alt="houses" />
+            </div>
+        </div>
+
     </section>
 
+    <section id="flights">
+        <div>
+            <p class="h3 fw-light">
+                Contact us for a free consultation! We'll plan everything within your budget and time. All you have to
+                worry about is showing up.
+            </p>
+
+            <div id="form">
+                <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Email address</label>
+                    <input id="email" type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@email.com">
+                </div>
+                <div class="mb-3">
+                    <label for="exampleFormControlTextarea1" class="form-label">Your Inquiry</label>
+                    <textarea id="textarea" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                </div>
+            </div>
+
+        </div>
+
+        <p class="h1 fw-bold"> Proud partners with</p>
+
+        <div id="partners">
+            <div data-aos="zoom-out" data-aos-duration="1200">
+                <img src="./assets/images/westjet.png" alt="" width="200px" height="80px">
+            </div>
+
+            <div data-aos="zoom-out" data-aos-duration="1500">
+                <img src="./assets/images/porter.png" alt="" width="200px" height="80px">
+            </div>
+
+            <div data-aos="zoom-out" data-aos-duration="1500">
+                <img src="./assets/images/air canada.png" alt="" width="200px" height="50px">
+            </div>
+
+            <div data-aos="zoom-out" data-aos-duration="1500">
+                <img src="./assets/images/sunwing.png" alt="" width="200px" height="60px">
+            </div>
+
+            <div data-aos="zoom-out" data-aos-duration="1500">
+                <img src="./assets/images/clubmed.png" alt="" width="200px" height="60px">
+            </div>
+        </div>
+
+    </section>
 
 
     <!-- Bootsrap script -->
@@ -180,6 +267,25 @@
     <script>
         AOS.init();
     </script>
+
+    <!-- Flickity script -->
+    <script src="/path/to/flickity.pkgd.min.js"></script>
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+
+    <!-- main.js -->
+    <script src="./js/main.js"></script>
+
+    <!-- Fullpage script -->
+    <script type="text/javascript" src="fullpage.js"></script>
+    <script>
+        new fullpage('#fullpage', {
+            //options here
+            autoScrolling: true,
+            scrollHorizontally: true
+        });
+    </script>
+
+
 </body>
 
 </html>
