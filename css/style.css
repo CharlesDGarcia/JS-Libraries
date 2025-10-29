@@ -106,6 +106,7 @@ body { font-family: sans-serif; }
 }
 
 
+
 #email{
     width: 500px;
 }
@@ -113,4 +114,9 @@ body { font-family: sans-serif; }
 #textarea{
     width: 500px;
     resize: none;
+}
+
+#form{
+    display: flex;
+    flex-direction: row;
 }
