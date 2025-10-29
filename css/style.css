@@ -25,83 +25,78 @@
 }
  */
 
+ body {
+    font-family: "Tinos", serif;
+    color: #333;
+    margin: 0;
+    padding: 0;
+ }
+
+ img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+ }
+
+ /* HERO Section */
 #hero {
-    padding-top: 300px;
-    padding-bottom: 300px;
+    padding: 120px 20px;
      color: rgb(252, 162, 102);
-    font-family: tinos-regular;
+    text-align: center;
 }
 
 #Logo { 
     display: flex;
-    flex-direction: row;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    padding-top: 200px;
-    padding-left: 400px;
-    padding-right: 400px;
+    gap: 25px;
+    text-align: center;
+    padding: 100px 20px;
 
     color: rgb(140, 146, 204);
-    font-family: tinos-regular;
-    background-color: rgb(255, 255, 255);
+    background: white;
+
 }
 
 #glide{
      color: rgb(252, 162, 102);
-    font-family: tinos-regular;
+    padding: 60px 10px;
 }
 
 #explore {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    gap: 15px;
 }
 
 #relax {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    gap: 15px;
 }
 
 #stay {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    gap: 15px;
 }
 
 #arrows {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 500px;
-
-    position: relative;
-    right: 100px;
+    justify-content: space-between;
+    padding: 10px 40px;
+    
 }
-
-#pictures {
-    padding-bottom: 50px;
-}
-
-#exploreIMG {
-    padding-right: 20px;
-}
-
-#relaxIMG {
-    padding-right: 20px;
-}
-
-#stayIMG {
-    padding-right: 20px;
-}
-
 
 
 #attractions{
-    padding-top: 100px;
-    padding-bottom: 500px;
+    padding: 80px 0;
+    text-align: center;
     color: rgb(252, 162, 102);
-    font-family: tinos-regular;
+    
 }
 /* FLICKITY */
 /* external css: flickity.css */
@@ -134,37 +129,81 @@ body { font-family: sans-serif; }
 #flights {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    gap: 55px;
+    gap: 30px;
 
-    padding-bottom: 100px;
+    padding: 80px 20px;
     color: rgb(51, 61, 155)
 }
 
-#partners{
+#form {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 60px;
-    
+    flex-direction: column;
+    gap: 20px;
+
+    width: 100%;
+    max-width: 350px;
+    text-align: center;
 }
 
-
-
-#email{
-    width: 500px;
+#email {
+    width: 100%;
+    padding: 12px;
 }
 
-#textarea{
-    width: 500px;
+textarea {
+    width: 100%;
+    padding: 12px;
     resize: none;
 }
 
-#form{
+#partners {
     display: flex;
-    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    padding-top: 10px;
 }
 
 
+/* >768px Tablet & Desktop */
 
+@media screen (min-width:768px) {
+    
+    #hero {
+        padding: 200px 40px;
+    }
+
+    #Logo {
+        flex-direction: row;
+        justify-content: center;
+        text-align: left;
+        padding: 150px 40px;
+    }
+
+    #explore, #relax, #stay {
+        flex-direction: row;
+        text-align: left;
+    }
+
+    #arrows {
+        gap: 120px;
+    }
+
+    #form {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    #email{
+        max-width: 350px;
+
+    }
+
+    #textarea {
+        max-width: 350px;
+    }
+
+
+}
+ 
